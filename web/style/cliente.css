@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
+
+header {
+    background-color: #919191;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.empresa {
+    font-size: 21px;
+}
+
+.acciones button {
+    background-color: #919191;
+    border: none;
+    padding: 0;
+    padding-right: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.acciones button img {
+    width: 50px;
+    height: auto;
+}
+
+.portada {
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    background-color: #dddddd;
+}
+
+.tipos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tipos button {
+    margin: 0 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+    background-color: #919191;
+    border: none;
+    color: white;
+}
+
+.productos {
+    margin-top: 20px;
+}
+
+.producto {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.producto img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.producto-content {
+    flex-grow: 1;
+}
+
+.producto h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.producto p {
+    margin-bottom: 5px;
+}
+
+.producto button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.producto button:hover {
+    background-color: #45a049;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 280px; /* Ancho de cada tarjeta */
+    display: inline-block; /* Mostrar tarjetas en línea */
+}
+
+.tipo {
+    padding: 15px;
+}
+
+.cards {
+    white-space: nowrap; /* Evitar que las tarjetas se rompan en múltiples líneas */
+    overflow-x: auto; /* Permitir desplazamiento horizontal si las tarjetas no caben en pantalla */
+}
+
+.cards::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento horizontal */
+}

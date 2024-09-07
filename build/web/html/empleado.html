@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../style/estilomenuBar.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/dist/css/ionicons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .imagen {
+            width: 80px;
+            height: 100px;
+        }
+        th {
+            background-color: black;
+            color: white;
+        }
+        .table-container {
+            display: flex;
+            justify-content: left;
+        }
+    </style>
+</head>
+<body onload="mostrarEmpleados()">
+<div class="menu">
+    <ion-icon name="menu-outline"></ion-icon>
+    <ion-icon name="close-outline"></ion-icon>
+</div>
+<div class="barra-lateral">
+    <div>
+        <div class="nombre-pagina">
+            <img id="cloud" src="../img/logoDefinitivo.jpg" name="cloud-outline" alt="Nube" width="45" height="45">
+            <span>KUAI</span>
+        </div>
+    </div>
+    <nav class="navegacion">
+        <ul>
+            <li>
+                <a id="link-productos" href="productos.html">
+                    <ion-icon name="restaurant-outline"></ion-icon>
+                    <span>Tus productos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <span>Empleados</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                    <span>Pedidos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="wine-outline"></ion-icon>
+                    <span>Tus mesas</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <div class="linea"></div>
+        <div class="modo-oscuro">
+            <div class="info">
+                <ion-icon name="moon-outline"></ion-icon>
+                <span>Drak Mode</span>
+            </div>
+            <div class="switch">
+                <div class="base">
+                    <div class="circulo"></div>
+                </div>
+            </div>
+        </div>
+        <div class="usuario">
+            <img src="/Jhampier.jpg" alt="">
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">Jhampier</span>
+                    <span class="email">jhampier@gmail.com</span>
+                </div>
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+</div>
+<main >
+<div class="formulario">
+    <h2 class="mb-4">Agregar Empleado</h2>
+    <form class="row" onsubmit="event.preventDefault(); insertarEmpleado();">
+        <input type="hidden" id="txtIdPersona">
+        <div class="col-md-6">
+            <label for="txtNombre">Nombre:</label>
+            <input type="text" class="form-control" id="txtNombre" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtApellidoP">Apellido Paterno:</label>
+            <input type="text" class="form-control" id="txtApellidoP" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtApellidoM">Apellido Materno:</label>
+            <input type="text" class="form-control" id="txtApellidoM" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtGenero">Género (M/F):</label>
+            <input type="text" class="form-control" id="txtGenero" maxlength="1" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtFechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" class="form-control" id="txtFechaNacimiento" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtRFC">RFC:</label>
+            <input type="text" class="form-control" id="txtRFC" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtDomicilio">Domicilio:</label>
+            <input type="text" class="form-control" id="txtDomicilio" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtTelefono">Teléfono:</label>
+            <input type="text" class="form-control" id="txtTelefono" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtNombreUsuario">Nombre de Usuario:</label>
+            <input type="text" class="form-control" id="txtNombreUsuario" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtContraseña">Contraseña:</label>
+            <input type="password" class="form-control" id="txtContraseña" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtRolUsuario">Rol de Usuario:</label>
+            <input type="text" class="form-control" id="txtRolUsuario" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtPuesto">Puesto:</label>
+            <input type="text" class="form-control" id="txtPuesto" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtRol">Rol:</label>
+            <input type="text" class="form-control" id="txtRol" required>
+        </div>
+        <div class="col-md-6">
+            <label for="txtSalarioBruto">Salario Bruto:</label>
+            <input type="number" class="form-control" id="txtSalarioBruto" step="0.01" required>
+        </div>
+        <div class="col-md-12 mt-3">
+            <button type="submit" class="btn btn-primary">Agregar Empleado</button>
+            <button type="button" onclick="actualizarEmpleado()">Actualizar</button>
+        </div>
+    </form>
+</div>
+    <div class="form-group">
+    <label for="txtBusqueda">Buscar empleado:</label>
+    <input type="text" id="txtBusqueda" class="form-control" placeholder="Ingrese el término de búsqueda...">
+</div>
+<button type="button" class="btn btn-primary" onclick="buscarEmpleado()">Buscar</button>
+
+    <div class="table-container">
+        <div id="empleados-container" class="contenedor"></div> 
+    </div>
+</main>
+    <script src="../js/empleado.js" type="text/javascript"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../js/script.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

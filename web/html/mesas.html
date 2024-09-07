@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidebar</title>
+        <link rel="stylesheet" href="/style.css">
+        <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../style/estilomenuBar.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/dist/css/ionicons.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            .imagen {
+                width: 80px;
+                height: 100px;
+            }
+            th {
+                background-color: black;
+                color: white;
+            }
+            .table-container {
+                display: flex;
+                justify-content: left;
+            }
+            .search-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            .search-icon {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .form-control {
+                padding-left: 40px;
+            }
+             .mesa-card {
+            margin-bottom: 20px;
+            
+             /* Ajusta este valor según tus necesidades */
+    overflow: auto;
+        }
+          .custom-card-header {
+        background-color: #eb6433;
+        color: white; /* Cambia el color del texto si es necesario para que sea legible */
+    }
+    .mesa-card {
+    max-height: 300px; /* Ajusta este valor según tus necesidades */
+    overflow: auto; /* Habilitar el desbordamiento vertical si es necesario */
+}
+.izquierdo {
+    border-radius: 5px; 
+ 
+     
+    margin: 5%; 
+    margin-left: 3%;
+}
+
+.derecho {
+   
+    
+    margin-left: 1%; 
+    margin-top: 1%; 
+   
+    margin-bottom: 1%;
+    margin: 5%;
+}
+        </style>
+    </head>
+    <body >
+        <div class="menu">
+            <ion-icon name="menu-outline">r</ion-icon>
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+
+        <div class="barra-lateral">
+            <div>
+                <div class="nombre-pagina">
+
+                    <img id="cloud" src="../img/logoDefinitivo.jpg" name="cloud-outline" alt="Nube" width="45" height="45">
+                    <span>KUAI</span>
+                </div>
+
+            </div>
+
+            <nav class="navegacion">
+                <ul>
+                    <li>
+                        <a id="link-productos" href="#">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                            <span>Tus productos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/empleado.html">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <span>Empleados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                            <span>Pedidos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <ion-icon name="wine-outline"></ion-icon>
+                            <span>Tus mesas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div>
+                <div class="linea"></div>
+
+                <div class="modo-oscuro">
+                    <div class="info">
+                        <ion-icon name="moon-outline"></ion-icon>
+                        <span>Drak Mode</span>
+                    </div>
+                    <div class="switch">
+                        <div class="base">
+                            <div class="circulo">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="usuario">
+                    <img src="/Jhampier.jpg" alt="">
+                    <div class="info-usuario">
+                        <div class="nombre-email">
+                            <span class="nombre">Jhampier</span>
+                            <span class="email">jhampier@gmail.com</span>
+                        </div>
+                        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <main >
+               <h1 style="text-align: center">Agregar Mesa</h1>
+            <div class="row">
+                <br><br><br>
+            <div class="formulario col-lg-7 col-md-6 col-sm-8 izquierdo">
+             
+                <form class="row" >
+
+
+                    <div class="col-md-6">
+                        <label for="idEmpleado">Seleccione un mesero:</label>
+                        <br>
+                        <select id="selectEmpleado" class="form-control">
+                            <option value="" disabled selected>Selecciona un mesero</option>
+                        </select>
+                        <br><br>
+                        <button type="button" class="btn btn-primary" onclick="insertarMesa()">Agregar Mesa</button>
+                        <button type="button" class="btn btn-secondary" onclick="actualizarMesa()">Editar Mesa</button>
+                    </div>
+                     
+
+                   
+                    
+                   
+                </form>
+               
+            </div>
+            <div id="formularioDiv" class=" col-lg-2 col-md-5 col-sm-8 derecho ">
+                <label for="mesa" id="lblMesa" style="display: none;">Num Mesa</label><br>
+        <input type="text"  class="form-control" readonly  id="idMesa" name="mesa" style="display: none;"><br>
+         <label for="empleado"  id="lblEmpleado" style="display: none;">Mesero que atiende:</label><br>
+        <input type="text"  class="form-control" id="txtEmpleado"  readonly  name="empleado"  style="display: none;"><br>  
+
+            </div>
+            </div>
+             
+ 
+         <div class="container ">
+        <h1>Mesas</h1>
+         <div class="col-md-12 mt-3">
+                        <div class="search-container">
+                            <img src="../img/lupa.png" alt="Icono de búsqueda" class="search-icon">
+                            <input class ="form-control" type="text" id ="filtroInput"  placeholder="ingrese un dato para buscar">
+                        </div>
+                        
+
+                    </div>
+        <br>
+        <div class="row">
+            
+        <div id="mesas-container" class="row" >
+            <!-- Las tarjetas de las mesas se agregarán aquí -->
+        </div>
+        </div>
+    </div>
+ 
+
+
+        </main>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="../js/js.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="../js/mesas.js" type="text/javascript"></script>
+        <script src="../js/script.js" type="text/javascript"></script>
+        
+    </body>
+</html>

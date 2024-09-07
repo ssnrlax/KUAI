@@ -1,0 +1,25 @@
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tarjeta {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    width: 100%; /* Ajusta el tamaño de la imagen al ancho de la tarjeta */
+    height: auto; /* Permite que la altura de la imagen se ajuste automáticamente */
+}
+
+.nombre {
+    font-weight: bold;
+}
+
+.descripcion {
+    margin-top: 5px;
+}

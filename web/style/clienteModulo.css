@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+header {
+    background-color: #003366;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+header img {
+    max-width: 10%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#tablaContainer {
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-right: 20px;
+}
+
+#tablaClientes {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+#tablaClientes th,
+#tablaClientes td {
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: left;
+    color: #000;
+    white-space: nowrap;
+}
+
+#tablaClientes th {
+    background-color: #003366;
+    color: #fff;
+}
+
+#busquedaContainer {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+ button {
+        background-color: #0074cc;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px; /* Añadido el redondeo de bordes */
+        cursor: pointer;
+        margin-right: 10px; /* Añadido para separar los botones */
+        border: 1px solid #0074cc; /* Añadido borde */
+    }
+
+    button:hover {
+        background-color: #005999;
+    }
+
+    .btn-eliminar {
+        background-color: #ff0000; /* Rojo para botón Eliminar */
+        border: 1px solid #ff0000; /* Añadido borde */
+    }
+
+    .btn-activar {
+        background-color: #00cc00; /* Verde para botón Activar */
+        border: 1px solid #00cc00; /* Añadido borde */
+    }
+
+    .btn-editar {
+        background-color: #e5be01;
+        border: 1px solid #e5be01; /* Añadido borde */
+    }
+
+
+

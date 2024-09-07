@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
+
+header {
+    background-color: #919191;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.empresa {
+    font-size: 21px;
+}
+
+.acciones button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para el círculo de estado */
+.pedido .estado {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Estilos para los nuevos estados */
+.pedido .estado.rojo {
+    background-color: red;
+}
+
+.pedido .estado.naranja {
+    background-color: orange;
+}
+
+.pedido .estado.amarillo {
+    background-color: yellow;
+}
+
+.pedido .estado.verde {
+    background-color: green;
+}
+
+.contenido {
+    display: flex;
+    width: 100%;
+}
+
+.pedidos {
+    width: 50%;
+    height: 50%;
+}
+
+.pedido {
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.estado-grande {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 4px solid #333;
+}
+
+.estado-grande.pendiente {
+    background-color: red;
+}
+
+.estado-grande.preparando {
+    background-color: orange;
+}
+
+.estado-grande.por-entregar {
+    background-color: yellow;
+}
+
+.estado-grande.entregado {
+    background-color: green;
+}
+
+/* Establece un diseño de dos columnas */
+.pedido-card, .detalle-card {
+    display: inline-block;
+    width: 40%;
+}
+
+/* Alinea los pedidos a la izquierda y los detalles a la derecha */
+.pedido-card {
+    float: left;
+    background-color: #f0f0f0; /* Color de fondo para distinguir */
+}
+
+.detalle-card {
+    padding: 20px;
+}
+
+
+.barra-titulo {
+    background-color: #a6a6a6;
+    color: black;
+    text-align: left;
+    font-size: 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+}

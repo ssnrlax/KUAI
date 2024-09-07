@@ -1,0 +1,171 @@
+
+
+a {
+    font-family: helvetica;
+}
+
+h5 {
+    font-family: montserrat;
+}
+
+.navbar-nav {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.navbar-light .navbar-brand {
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.carousel {
+    position: relative;
+    z-index: 10;
+    margin-top: -40px;
+}
+
+.carousel-caption h5 {
+    letter-spacing: 2px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.menu-hamburguesa {
+    position: relative;
+    z-index: 5;
+}
+
+.card-color {
+    background-color: #266495;
+    border-color: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+header {
+    background-color: #ffaa16;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.empresa {
+    font-size: 21px;
+}
+
+.acciones button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+select {
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.pedidos {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.pedido {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+}
+
+.pedido {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Colores de los círculos */
+.circle.green {
+    background-color: green;
+}
+
+.circle.yellow {
+    background-color: yellow;
+}
+
+.circle.red {
+    background-color: red;
+}
+
+.circle.orange {
+    background-color: orange;
+}
+
+.circle.gray {
+    background-color: gray;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.custom-button {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}

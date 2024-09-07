@@ -1,0 +1,142 @@
+/* Styles from the previous response */
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #003366;
+   
+}
+
+header img {
+    max-width: 10%;
+    height: auto;
+}
+header {
+    background-color: #003366;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+nav {
+    color: #fff;
+    margin: 0 15px;
+    padding: 10px;
+    background-color: #075096;
+}
+
+nav a {
+    margin-right: 40px;
+}
+
+.izquierdo {
+    flex: 1;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+    margin: 1%; 
+    margin-left: 3%;
+    width: 48%;
+    padding: 15px;
+}
+
+.derecho {
+    flex: 1;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+    margin-left: 1%; 
+    margin-top: 1%; 
+    margin-right: 2%; 
+    margin-bottom: 1%;
+    width: 48%;
+    padding: 15px;
+}
+
+.label {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Improve button styles */
+.button {
+    background-color: #0059b3;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #004080;
+}
+
+.contenedor {
+    display: flex;
+    
+}
+
+#busqueda-input {
+    width: 70%;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#edit-id-empleado {
+    display: none;
+}
+
+/* Estilos para la tabla responsive */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Estilos para la tabla y sus celdas */
+#employee-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#employee-table th, #employee-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+#employee-table th {
+    background-color: #0059b3;
+    color: #fff;
+}
+
+#employee-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#employee-table tbody tr:hover {
+    background-color: #ddd;
+}

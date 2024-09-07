@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Productos</title>
+    <!-- Asegúrate de que el archivo JavaScript.js esté en la misma carpeta que tu página HTML -->
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="cargarProductos('Bebidas'); cargarProductos('Postres'); cargarProductos('Platillos');">
+    <div class="formulario">
+    <h2>Agregar Producto</h2>
+    <form onsubmit="event.preventDefault(); insertarProducto();">
+        <label for="nombreProducto">Nombre del Producto:</label><br>
+        <input type="text" id="nombreProducto" name="nombreProducto" required><br>
+
+        <label for="input-imagen">Imagen</label><br>
+       <input type="file" id="input-imagen" accept="image/*">
+       
+       <br><br>
+
+        <label for="idCategoria">ID de la Categoría:</label><br>
+        <input type="text" id="idCategoria" name="idCategoria" required><br>
+
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" required></textarea><br>
+
+        <label for="precioUnitario">Precio Unitario:</label><br>
+        <input type="number" id="precioUnitario" name="precioUnitario" step="0.01" required><br>
+
+        <button type="button" onclick="insertarProducto()">Agregar Producto</button>
+        <button type="button" onclick="actualizarProducto()">Actualizar</button>
+    </form>
+</div>
+    <div class="contenedor">
+        <div id="Bebidas" class="tarjetas"></div> <!-- Contenedor para las bebidas -->
+        <div id="Postres" class="tarjetas"></div> <!-- Contenedor para los postres -->
+        <div id="Platillos" class="tarjetas"></div> <!-- Contenedor para los platillos -->
+    </div>
+    <script src="../js/js.js" type="text/javascript"></script>
+</body>
+</html>
